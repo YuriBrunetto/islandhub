@@ -21,7 +21,7 @@ export default function Searchbar() {
       className="h-12 px-8 pr-16 flex items-center relative rounded-full bg-white shadow transition-all"
       variants={variants}
       initial="initial"
-      transition={{ type: 'spring', stiffness: 50, duration: 100 }}
+      transition={{ type: 'spring', duration: 0.3 }}
       animate={focused ? 'expanded' : 'initial'}
     >
       <input

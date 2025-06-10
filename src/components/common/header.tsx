@@ -1,10 +1,23 @@
 import Image from 'next/image'
 import HeaderButton from './header-button'
 import Searchbar from './searchbar'
+import * as motion from 'motion/react-client'
 
 export default function Header() {
   return (
-    <header className="w-full p-2 flex items-center justify-between rounded-full max-w-4xl h-16 bg-white/30 backdrop-blur-sm">
+    <motion.header
+      initial={{ opacity: 0, translateY: '-10%' }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{
+        duration: 0.4,
+        scale: {
+          type: 'spring',
+          visualDuration: 0.3,
+          bounce: 0.5
+        }
+      }}
+      className="w-full p-2 flex items-center justify-between rounded-full h-16 bg-white/30 backdrop-blur-sm"
+    >
       <div className="flex items-center">
         <a
           href="#"
@@ -30,6 +43,6 @@ export default function Header() {
           </span>
         </button>
       </div>
-    </header>
+    </motion.header>
   )
 }
