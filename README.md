@@ -8,6 +8,7 @@
 - `tailwindcss` - styling
 - `prettier` - code formatter
 - `motion` - animations
+- `lucide` - icons
 
 ## Running
 
