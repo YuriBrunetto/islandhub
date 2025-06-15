@@ -9,23 +9,27 @@ function SocialButton() {
 
 export default function Banners() {
   return (
-    <section className="bg-white/70 backdrop-blur-sm col-span-5 p-8 rounded-2xl">
+    <section className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl">
       {/* banner 1 */}
       <div className="flex flex-col items-start">
         <span className="text-[12px] rounded-full px-4 py-2 bg-white/70 shadow">
           🎛️ Music is classic
         </span>
 
-        <div className="mt-4 max-w-[60%]">
-          <div className="flex items-center mt-2 space-x-2">
-            <h2 className="text-4xl font-semibold">Sequoia Inspiring Musico</h2>
-            <span className="font-bold text-3xl">01</span>
-            <span className="text-sm opacity-10">----------</span>
-            <div className="">
-              <p className="font-medium">Clear sounds</p>
-              <p className="text-sm text-zinc-500">
-                Making your dream music come true, stay with Sequoia Sounds!
-              </p>
+        <div className="mt-4 max-w-[50%]">
+          <div className="">
+            <h2 className="text-4xl font-semibold max-w-[80%]">
+              Sequoia Inspiring Musico.
+            </h2>
+            <div className="flex items-center space-x-4 mt-2">
+              <span className="font-bold text-3xl">01</span>
+              <span className="text-sm opacity-10">-------------</span>
+              <div className="pr-4">
+                <p className="font-medium">Clear sounds</p>
+                <p className="text-sm text-zinc-500">
+                  Making your dream music come true, stay with Sequoia Sounds!
+                </p>
+              </div>
             </div>
           </div>
         </div>

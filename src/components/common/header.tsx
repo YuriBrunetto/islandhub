@@ -1,7 +1,8 @@
+import * as motion from 'motion/react-client'
 import Image from 'next/image'
+import Link from 'next/link'
 import HeaderButton from './header-button'
 import Searchbar from './searchbar'
-import * as motion from 'motion/react-client'
 
 export default function Header() {
   return (
@@ -16,16 +17,16 @@ export default function Header() {
           bounce: 0.5
         }
       }}
-      className="w-full p-2 flex items-center justify-between rounded-full h-16 bg-white/30 backdrop-blur-sm"
+      className="w-full p-2 flex items-center justify-between rounded-full h-16 bg-white/50 backdrop-blur-sm"
     >
       <div className="flex items-center">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="h-12 mr-1.5 font-light p-1 text-lg bg-black/5 rounded-full py-2 px-4 hover:bg-black/10"
           title="nitec."
         >
           nitec.
-        </a>
+        </Link>
 
         <Searchbar />
       </div>
