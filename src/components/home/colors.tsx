@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import colors from '../../../public/data/colors.json'
+import colors from '@/data/colors.json'
 
 type Color = {
   name: string
@@ -17,7 +17,7 @@ export default function Colors() {
         <button
           key={color.name}
           type="button"
-          className="bg-white rounded-full size-8 cursor-pointer shadow-md flex items-center justify-center"
+          className="bg-white rounded-full size-8 cursor-pointer shadow-md flex items-center justify-center transition-all hover:shadow-lg"
         >
           <span
             className={`size-5 rounded-full bg-linear-to-b ${color.background}`}

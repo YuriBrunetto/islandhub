@@ -1,6 +1,5 @@
-import ButtonArrow from '@/components/common/button-arrow'
+import AsideComponent from '@/components/common/aside'
 import Banners from '@/components/home/banners'
-import Colors from '@/components/home/colors'
 import Faces from '@/components/home/faces'
 import { Star } from 'lucide-react'
 
@@ -57,30 +56,7 @@ export default function Home() {
         </div>
       </div>
 
-      <aside className="col-span-1 space-y-4">
-        <div className="bg-white/70 p-4 backdrop-blur-sm rounded-xl">
-          <p className="font-medium">Popular Colors</p>
-          <Colors />
-        </div>
-
-        <div className="bg-white/70 p-4 backdrop-blur-sm rounded-xl">
-          <p className="font-medium leading-5">
-            New Bud
-            <br />X Gen
-          </p>
-          <ButtonArrow />
-        </div>
-
-        <div className="bg-white/70 p-4 backdrop-blur-sm rounded-xl">
-          <p className="font-medium leading-5">
-            Light Grey Surface
-            <br />
-            Headphone
-          </p>
-          <span className="text-sm text-zinc-500">Boosted with bass</span>
-          <ButtonArrow />
-        </div>
-      </aside>
+      <AsideComponent />
     </div>
   )
 }

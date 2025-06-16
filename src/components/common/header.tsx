@@ -17,7 +17,7 @@ export default function Header() {
           bounce: 0.5
         }
       }}
-      className="w-full p-2 flex items-center justify-between rounded-full h-16 bg-white/50 backdrop-blur-sm"
+      className="w-full max-w-[1240px] fixed top-4 p-2 flex items-center justify-between rounded-full h-16 bg-white/50 backdrop-blur-sm left-1/2 -translate-x-1/2 z-20 shadow"
     >
       <div className="flex items-center">
         <Link
