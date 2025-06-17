@@ -1,3 +1,5 @@
+'use client'
+
 import { ArrowUpRight, Heart, ShoppingCartIcon } from 'lucide-react'
 import Link from 'next/link'
 
@@ -23,22 +25,22 @@ function ButtonContent({ title, icon }: { title: string; icon: string }) {
   )
 }
 
-type BaseProps = {
+type ActionButtonProps = {
   className?: string
   title: string
   icon: string
+  isLink?: boolean
+  href?: string
+  handleAction?: () => void
 }
-
-type ActionButtonProps =
-  | (BaseProps & { isLink: true; href: string })
-  | (BaseProps & { isLink: false; href?: never })
 
 export default function ActionButton({
   className = '',
-  isLink,
+  isLink = false,
   href,
   title,
-  icon
+  icon,
+  handleAction
 }: ActionButtonProps) {
   return isLink ? (
     <Link
@@ -51,8 +53,9 @@ export default function ActionButton({
   ) : (
     <button
       type="button"
-      title="View All Products"
+      title={title}
       className={`relative cursor-pointer h-10 pl-4 pr-11 py-2 bg-lime-200 flex items-center break-normal rounded-full font-medium transition-all shadow hover:shadow-md ${className}`}
+      onClick={handleAction}
     >
       <ButtonContent title={title} icon={icon} />
     </button>

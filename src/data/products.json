@@ -7,7 +7,7 @@
     "price": 79.99,
     "stock": 150,
     "description": "High-quality wireless earbuds with active noise cancellation and long battery life.",
-    "image": "/images/df-pro-wireless-earbuds.jpg",
+    "image": "/products/product-1.jpeg",
     "techSpecs": "Bluetooth 5.2, 10mm dynamic drivers, active noise cancellation up to 35dB, 8h playback + 24h with case, IPX5 water resistance, USB-C fast charging, touch controls, and dual-microphone ENC for clear calls."
   },
   {
@@ -18,7 +18,7 @@
     "price": 149.99,
     "stock": 85,
     "description": "Over-ear headphones designed for studio-quality sound and all-day comfort.",
-    "image": "/images/df-studio-headphones.jpg",
+    "image": "/products/product-2.jpeg",
     "techSpecs": "40mm neodymium drivers, frequency response 10Hz–40kHz, detachable 3.5mm cable, protein leather ear cushions, foldable design, impedance 32Ω, and passive noise isolation for precise studio monitoring."
   },
   {
@@ -29,7 +29,7 @@
     "price": 129.99,
     "stock": 60,
     "description": "Portable Bluetooth speaker with deep bass, 12-hour battery, and water resistance.",
-    "image": "/images/df-pulse-speaker.jpg",
+    "image": "/products/product-3.jpeg",
     "techSpecs": "Dual 20W drivers, Bluetooth 5.0, 12h battery life, IPX7 waterproof rating, TWS pairing, USB-C charging, built-in microphone for calls, and customizable EQ via mobile app."
   },
   {
@@ -40,7 +40,7 @@
     "price": 19.99,
     "stock": 300,
     "description": "Affordable wired earphones with clear sound and built-in microphone.",
-    "image": "/images/df-lite-wired-earphones.jpg",
+    "image": "/products/product-4.jpeg",
     "techSpecs": "9mm drivers, in-line mic with single-button remote, 3.5mm jack, frequency response 20Hz–20kHz, flat anti-tangle cable, lightweight ABS housing, and ergonomic ear tips in 3 sizes."
   },
   {
@@ -51,7 +51,7 @@
     "price": 249.99,
     "stock": 20,
     "description": "Powerful party speaker with LED lights, dual subwoofers, and microphone input.",
-    "image": "/images/df-boom-max.jpg",
+    "image": "/products/product-5.jpeg",
     "techSpecs": "100W RMS output, dual 6.5\" subwoofers, RGB LED lighting modes, Bluetooth 5.0, AUX/USB/mic input, 10h battery, karaoke mode, built-in mixer, and reinforced handle for portability."
   },
   {
@@ -62,7 +62,7 @@
     "price": 109.99,
     "stock": 95,
     "description": "Open-ear headphones with ergonomic fit and ambient sound awareness.",
-    "image": "/images/df-air-pro.jpg",
+    "image": "/products/product-6.jpeg",
     "techSpecs": "Open-ear bone conduction tech, IP55 dust/sweat resistant, 8h battery life, multipoint Bluetooth 5.1, lightweight titanium frame, magnetic charging, and voice assistant integration."
   },
   {
@@ -73,7 +73,7 @@
     "price": 39.99,
     "stock": 70,
     "description": "Colorful, safe headphones for kids with volume-limiting technology.",
-    "image": "/images/df-kids-headphones.jpg",
+    "image": "/products/product-7.jpeg",
     "techSpecs": "85dB volume limiter, 30mm drivers, adjustable headband, soft foam cushions, detachable 3.5mm cable, tangle-free design, BPA-free plastic, and includes fun sticker pack for customization."
   },
   {
@@ -84,7 +84,7 @@
     "price": 189.99,
     "stock": 40,
     "description": "Premium wireless headphones with advanced noise-canceling and touch controls.",
-    "image": "/images/df-anc-elite.jpg",
+    "image": "/products/product-8.jpeg",
     "techSpecs": "Hybrid ANC up to 40dB, 40mm high-res drivers, Bluetooth 5.3, 30h battery life with ANC, touch gesture controls, USB-C fast charging, ambient mode, and foldable premium aluminum design."
   }
 ]

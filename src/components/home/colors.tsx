@@ -12,7 +12,7 @@ export default function Colors() {
   const [uiColors] = useState<Color[]>(colors)
 
   return (
-    <div className="grid grid-cols-5 gap-2 mt-2">
+    <div className="flex items-center gap-2 mt-2">
       {uiColors.map(color => (
         <button
           key={color.name}

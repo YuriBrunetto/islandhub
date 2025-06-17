@@ -1,8 +1,10 @@
+import Footer from '@/components/common/footer'
+import Header from '@/components/common/header'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { Toaster } from 'react-hot-toast'
 import './globals.css'
-import Header from '@/components/common/header'
-import Footer from '@/components/common/footer'
+import { CartProvider } from './context/cart-context'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -29,14 +31,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
+        <CartProvider>
+          <Header />
 
-        <main className="max-w-[1280px] mx-auto">
-          <div className="min-h-screen p-8 pt-24 pb-0 gap-16 font-[family-name:var(--font-geist-sans)]">
-            {children}
-            <Footer />
-          </div>
-        </main>
+          <main className="max-w-[1280px] mx-auto">
+            <div className="min-h-screen px-4 lg:px-8 pt-24 pb-0 gap-16 font-[family-name:var(--font-geist-sans)]">
+              {children}
+              <Footer />
+            </div>
+          </main>
+
+          <Toaster
+            toastOptions={{
+              className: 'bg-zinc-800'
+            }}
+          />
+        </CartProvider>
       </body>
     </html>
   )

@@ -4,7 +4,7 @@ import ButtonArrow from './button-arrow'
 export default function AsideComponent() {
   return (
     <aside className="col-span-1 space-y-4">
-      <div className="bg-white/70 p-4 backdrop-blur-sm rounded-xl">
+      <div className="w-full bg-white/70 p-4 backdrop-blur-sm rounded-xl">
         <p className="font-medium">Popular Colors</p>
         <Colors />
       </div>

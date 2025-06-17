@@ -14,4 +14,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.my-toaster {
+  background-color: oklch(27.4% 0.006 286.033) !important;
+  color: oklch(93.8% 0.127 124.321) !important;
+  font-weight: 600;
+}
+
 /* Responsividade: mobile (≤ 640px), tablet (641–1024px) e desktop (>1024px). */
