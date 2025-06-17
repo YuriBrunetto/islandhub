@@ -1,5 +1,6 @@
 'use client'
 
+import * as motion from 'motion/react-client'
 import { useCart } from '@/app/context/cart-context'
 import { Product } from '@/types/product'
 import { Truck } from 'lucide-react'
@@ -12,7 +13,19 @@ export default function ProductDetail({ product }: { product: Product }) {
   const { addToCart, addToFavorites } = useCart()
 
   return (
-    <article className="bg-white/70 backdrop-blur-sm p-4 lg:p-8 rounded-2xl">
+    <motion.article
+      initial={{ opacity: 0, translateX: '-5%' }}
+      animate={{ opacity: 1, translateX: 0 }}
+      transition={{
+        duration: 0.4,
+        scale: {
+          type: 'spring',
+          visualDuration: 0.3,
+          bounce: 0.5
+        }
+      }}
+      className="bg-white/70 backdrop-blur-sm p-4 lg:p-8 rounded-2xl"
+    >
       <div className="flex flex-col lg:flex-row">
         <div className="lg:mr-4">
           <Image
@@ -66,6 +79,6 @@ export default function ProductDetail({ product }: { product: Product }) {
         <h3 className="font-semibold text-xl">Reviews</h3>
         <Reviews />
       </div>
-    </article>
+    </motion.article>
   )
 }

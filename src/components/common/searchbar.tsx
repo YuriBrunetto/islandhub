@@ -35,10 +35,9 @@ function Results({ products }: { products: Product[] }) {
   )
 }
 
-export default function Searchbar() {
+export default function Searchbar({ active }: { active: boolean }) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<Product[]>([])
-  const [focused, setFocused] = useState(false)
 
   const pathname = usePathname()
 
@@ -61,32 +60,15 @@ export default function Searchbar() {
     setResults(filtered)
   }, [query])
 
-  const variants = {
-    initial: {
-      width: '20rem'
-    },
-    expanded: {
-      width: '24rem'
-    }
-  }
-
   return (
-    <div className="hidden lg:block relative">
+    <div className={`absolute w-[calc(100%-16px)] top-17 lg:top-0 lg:relative`}>
       <Results products={results} />
 
-      <motion.div
-        className="h-12 px-8 pr-16 flex items-center relative rounded-full bg-white shadow transition-all"
-        variants={variants}
-        initial="initial"
-        transition={{ type: 'ease', duration: 0.3 }}
-        animate={focused ? 'expanded' : 'initial'}
-      >
+      <div className="w-full lg:w-[24rem] h-12 px-8 pr-16 flex items-center relative rounded-full bg-white shadow transition-all">
         <input
           type="text"
           name="search"
           placeholder="Search products..."
-          onFocus={() => setFocused(true)}
-          onBlur={() => setFocused(false)}
           onChange={e => setQuery(e.target.value)}
           className="font-medium border-none w-full focus:outline-none"
           value={query}
@@ -97,7 +79,7 @@ export default function Searchbar() {
         >
           <Search color="#ffffff" size={20} />
         </button>
-      </motion.div>
+      </div>
     </div>
   )
 }

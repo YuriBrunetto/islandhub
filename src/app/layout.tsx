@@ -18,7 +18,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'nitec.',
-  description: 'is a company ...'
+  description: 'nitec is a company ...',
+  openGraph: {
+    title: 'nitec.',
+    description: 'nitec is a company...'
+  }
 }
 
 export default function RootLayout({

@@ -6,9 +6,12 @@ import Link from 'next/link'
 import HeaderButton from './header-button'
 import Searchbar from './searchbar'
 import { useCart } from '@/app/context/cart-context'
+import { Search } from 'lucide-react'
+import { useState } from 'react'
 
 export default function Header() {
   const { cart, favorites } = useCart()
+  const [isSearchActive, setIsSearchActive] = useState(false)
 
   return (
     <motion.header
@@ -22,7 +25,7 @@ export default function Header() {
           bounce: 0.5
         }
       }}
-      className="w-[calc(100%-16px)] lg:w-full lg:max-w-[1240px] fixed top-4 p-2 flex items-center justify-between rounded-full h-16 bg-white/50 backdrop-blur-sm left-2 lg:left-1/2 lg:-translate-x-1/2 z-20 shadow"
+      className="w-[calc(100%-16px)] lg:max-w-[1240px] fixed top-4 p-2 flex items-center justify-between rounded-full h-16 bg-white/50 backdrop-blur-sm left-2 lg:left-1/2 lg:-translate-x-1/2 z-20 shadow"
     >
       <div className="flex items-center">
         <Link
@@ -33,12 +36,19 @@ export default function Header() {
           nitec.
         </Link>
 
-        <Searchbar />
+        <Searchbar active={isSearchActive} />
       </div>
 
       <div className="flex items-center space-x-1.5">
         <HeaderButton name="cart" count={cart.length} />
         <HeaderButton name="favorites" count={favorites.length} />
+        <button
+          type="button"
+          className="size-12 flex justify-center items-center rounded-full bg-zinc-800 shadow cursor-pointer md:hidden"
+          onClick={() => setIsSearchActive(!isSearchActive)}
+        >
+          <Search size={20} className="text-white" />
+        </button>
 
         <button
           type="button"

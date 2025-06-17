@@ -1,3 +1,4 @@
+import * as motion from 'motion/react-client'
 import AsideComponent from '@/components/common/aside'
 import Banners from '@/components/home/banners'
 import Faces from '@/components/home/faces'
@@ -12,9 +13,21 @@ export default function Home() {
       <div className="lg:col-span-4">
         <Banners />
 
-        <div className="grid lg:grid-cols-7 gap-4 mt-4">
+        <motion.div
+          initial={{ opacity: 0, translateY: '5%' }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{
+            duration: 0.4,
+            scale: {
+              type: 'spring',
+              visualDuration: 0.3,
+              bounce: 0.5
+            }
+          }}
+          className="grid md:grid-cols-3 lg:grid-cols-7 gap-4 mt-4 md:items-stretch"
+        >
           <div className="lg:col-span-2">
-            <div className="bg-white/70 backdrop-blur-sm p-4 rounded-2xl">
+            <div className="bg-white/70 backdrop-blur-sm p-4 rounded-2xl h-full">
               <div className="relative">
                 <p className="font-medium">More products</p>
                 <span className="text-sm text-zinc-600">460+ items</span>
@@ -39,8 +52,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           <div className="lg:col-span-2">
-            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl">
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl h-full">
               <div className="relative flex items-center justify-center">
                 <div className="size-30 bg-linear-to-b from-sky-600 to-sky-400 rounded-full flex flex-col items-center justify-center">
                   <span className="font-medium text-white text-2xl">5m+</span>
@@ -57,18 +71,27 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           <div className="lg:col-span-3">
-            <div className="bg-white/70 backdrop-blur-sm p-4 rounded-2xl">
-              <span className="rounded-full px-2 py-1 border border-solid border-black/20 text-sm">
+            <div className="bg-white/70 backdrop-blur-sm p-4 rounded-2xl h-full relative overflow-hidden">
+              <span className="rounded-full px-2 py-1 border border-solid border-white/20 text-[12px] text-white/80">
                 ❤️‍🔥 Popular
               </span>
-              <p className="font-medium mt-3 leading-5 max-w-[40%]">
+
+              <p className="font-medium mt-6 leading-5 max-w-[40%] text-white">
                 Listening Has Been Released
               </p>
               <Faces className="mt-2" />
+
+              <Image
+                src="/ads/ad-1.jpg"
+                alt="Listening Has Been Released"
+                fill
+                className="object-cover -z-10"
+              />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <AsideComponent />
