@@ -1,16 +1,22 @@
 import AsideComponent from '@/components/common/aside'
 import ProductDetail from '@/components/products/product-detail'
 import products from '@/data/products.json'
+import { Product } from '@/types/product'
 import { notFound } from 'next/navigation'
 
 type ProductsPageProps = {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export default function ProductsPage({ params }: ProductsPageProps) {
-  const product = products.find(p => p.id === params.id)
+async function getProductById(id: string) {
+  return products.find((p: Product) => p.id === id) ?? null
+}
+
+export default async function ProductsPage(props: ProductsPageProps) {
+  const params = await props.params;
+  const product = await getProductById(params.id)
 
   if (!product) return notFound()
 

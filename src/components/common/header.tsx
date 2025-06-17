@@ -46,7 +46,12 @@ export default function Header() {
         >
           Ryman Alex
           <span className="w-10 h-10 absolute right-2 border-2 border-solid border-zinc-200 rounded-full bg-zinc-100 overflow-hidden">
-            <Image src="/profile.png" alt="Ryman Alex" width={40} height={40} />
+            <Image
+              src="/faces/face-1.png"
+              alt="Ryman Alex"
+              width={40}
+              height={40}
+            />
           </span>
         </button>
       </div>
