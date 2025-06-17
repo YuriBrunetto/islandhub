@@ -61,7 +61,7 @@ export default function Searchbar() {
   }, [query])
 
   return (
-    <div className={`absolute w-[calc(100%-16px)] top-17 lg:top-0 lg:relative`}>
+    <div className={`absolute w-[calc(100%-16px)] top-17 md:top-0 md:relative`}>
       <Results products={results} />
 
       <div className="w-full lg:w-[24rem] h-12 px-8 pr-16 flex items-center relative rounded-full bg-white shadow transition-all">

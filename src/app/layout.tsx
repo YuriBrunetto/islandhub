@@ -39,7 +39,7 @@ export default function RootLayout({
           <Header />
 
           <main className="max-w-[1280px] mx-auto">
-            <div className="min-h-screen px-4 lg:px-8 pt-24 pb-0 gap-16 font-[family-name:var(--font-geist-sans)]">
+            <div className="min-h-screen px-4 lg:px-8 pt-34 md:pt-24 pb-0 gap-16 font-[family-name:var(--font-geist-sans)]">
               {children}
               <Footer />
             </div>
