@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'IslandHub',
-  description: 'IslandHub is a company ...'
+  title: 'nitec.',
+  description: 'is a company ...'
 }
 
 export default function RootLayout({

@@ -46,7 +46,7 @@ export default function ActionButton({
     <Link
       href={href!}
       title={title}
-      className={`relative h-10 pl-4 pr-11 py-2 bg-lime-200 flex items-center break-normal rounded-full font-medium transition-all shadow hover:shadow-md ${className}`}
+      className={`relative h-10 pl-4 pr-11 py-2 bg-lime-200 flex items-center break-normal leading-4 rounded-full font-medium transition-all shadow hover:shadow-md ${className}`}
     >
       <ButtonContent title={title} icon={icon} />
     </Link>
@@ -54,7 +54,7 @@ export default function ActionButton({
     <button
       type="button"
       title={title}
-      className={`relative cursor-pointer h-10 pl-4 pr-11 py-2 bg-lime-200 flex items-center break-normal rounded-full font-medium transition-all shadow hover:shadow-md ${className}`}
+      className={`relative cursor-pointer h-10 pl-4 pr-11 py-2 bg-lime-200 flex items-center leading-4 break-normal rounded-full font-medium transition-all shadow hover:shadow-md ${className}`}
       onClick={handleAction}
     >
       <ButtonContent title={title} icon={icon} />

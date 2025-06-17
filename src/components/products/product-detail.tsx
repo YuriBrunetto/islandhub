@@ -48,7 +48,7 @@ export default function ProductDetail({ product }: { product: Product }) {
 
             <button
               type="button"
-              className="bg-white/70 rounded-full font-medium cursor-pointer px-4 transition-all shadow hover:shadow-md"
+              className="bg-white/70 h-10 rounded-full font-medium cursor-pointer px-4 leading-4 transition-all shadow hover:shadow-md"
               onClick={() => addToFavorites(product)}
             >
               Add to favorites
