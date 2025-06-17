@@ -35,7 +35,7 @@ function Results({ products }: { products: Product[] }) {
   )
 }
 
-export default function Searchbar({ active }: { active: boolean }) {
+export default function Searchbar() {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<Product[]>([])
 

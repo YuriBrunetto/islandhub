@@ -1,14 +1,26 @@
 # IslandHub 🏝️
 
-> Test project by Yuri Brunetto
+> Test project `nitec.` by Yuri Brunetto
 
 ## Tech Stack
 
-- `next.js` - framework
-- `tailwindcss` - styling
-- `prettier` - code formatter
-- `motion` - animations
-- `lucide` - icons
+- `next.js` - framework with SSR
+- `tailwindcss` - styling using only classNames
+- `prettier` - code formatter for beautiful code
+- `motion` - animations for a good UX
+- `lucide` - icons for prettier visuals
+
+## Folder Structure
+
+I chose the app router with `src/` folder structure for `next.js`.
+
+```
+- src/app/* -> pages
+- src/components/* -> components
+- src/data/* -> json data
+- src/types/* -> typescript types
+- public/* -> images and files
+```
 
 ## Running
 

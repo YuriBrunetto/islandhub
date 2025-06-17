@@ -1,17 +1,14 @@
 'use client'
 
+import { useCart } from '@/app/context/cart-context'
 import * as motion from 'motion/react-client'
 import Image from 'next/image'
 import Link from 'next/link'
 import HeaderButton from './header-button'
 import Searchbar from './searchbar'
-import { useCart } from '@/app/context/cart-context'
-import { Search } from 'lucide-react'
-import { useState } from 'react'
 
 export default function Header() {
   const { cart, favorites } = useCart()
-  const [isSearchActive, setIsSearchActive] = useState(false)
 
   return (
     <motion.header
@@ -36,19 +33,12 @@ export default function Header() {
           nitec.
         </Link>
 
-        <Searchbar active={isSearchActive} />
+        <Searchbar />
       </div>
 
       <div className="flex items-center space-x-1.5">
         <HeaderButton name="cart" count={cart.length} />
         <HeaderButton name="favorites" count={favorites.length} />
-        <button
-          type="button"
-          className="size-12 flex justify-center items-center rounded-full bg-zinc-800 shadow cursor-pointer md:hidden"
-          onClick={() => setIsSearchActive(!isSearchActive)}
-        >
-          <Search size={20} className="text-white" />
-        </button>
 
         <button
           type="button"
