@@ -6,11 +6,11 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 type Props = {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const product = await getProductById(params.id)
+  const product = await getProductById((await params).id)
 
   if (!product) {
     return {
@@ -25,24 +25,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: product.name,
       description: product.description,
-      images: [product.image] // URL da imagem
+      images: [product.image]
     }
   }
 }
 
-type ProductsPageProps = {
-  params: Promise<{
-    id: string
-  }>
-}
-
-async function getProductById(id: string) {
+async function getProductById(id: string): Promise<Product | null> {
   return products.find((p: Product) => p.id === id) ?? null
 }
 
-export default async function ProductsPage(props: ProductsPageProps) {
-  const params = await props.params
-  const product = await getProductById(params.id)
+export default async function ProductsPage({ params }: Props) {
+  const product = await getProductById((await params).id)
 
   if (!product) return notFound()
 
@@ -51,7 +44,6 @@ export default async function ProductsPage(props: ProductsPageProps) {
       <div className="lg:col-span-4">
         <ProductDetail product={product} />
       </div>
-
       <AsideComponent />
     </div>
   )

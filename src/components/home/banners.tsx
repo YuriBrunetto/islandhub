@@ -55,7 +55,7 @@ export default function Banners() {
           />
         </div>
       </div>
-      <div className="flex items-center mt-12">
+      <div className="flex items-center mt-4">
         <span className="text-sm">Follow us on:</span>
 
         <div className="flex items-center space-x-2 ml-2">
